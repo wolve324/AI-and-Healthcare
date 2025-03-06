@@ -1,22 +1,29 @@
-{% extends "bootstrap/base.html" %}
-{% block styles %}
-{{super()}}
-<link rel="stylesheet" href="{{url_for('.static', filename='styles.css')}}">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection - Anxiety & Depression Detection</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+</head>
+<body>
 
-{% block content%}
-<ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333;">
-    <li style="float: left;"><a class="active" href="home" style="display: block; color: white;padding: 14px 16px;">Home</a></li>
-    <li style="float: left;"><a href="face" style="display: block; color: white;padding: 14px 16px;">Face</a></li>
-    <li style="float: left;"><a href="voice" style="display: block; color: white;padding: 14px 16px;">Voice</a></li>
-</ul>
-<a href="qstn"><img src="{{url_for('.static',filename = 'bgm.svg')}}"></a>
-<h2 class="heading">{{data}}</br></h2>
-<img class="icon" src="{{url_for('.static',filename = 'face-detection.svg')}}">
-<a href="expression"><button class="detect_btn">Detect</button></a>
-<p>Press q to quit</p>
+    <!-- Navigation Bar -->
+    <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333;">
+        <li style="float: left;"><a class="active" href="index.html" style="display: block; color: white; padding: 14px 16px;">Home</a></li>
+        <li style="float: left;"><a href="face.html" style="display: block; color: white; padding: 14px 16px;">Face</a></li>
+        <li style="float: left;"><a href="voice.html" style="display: block; color: white; padding: 14px 16px;">Voice</a></li>
+    </ul>
 
+    <!-- Image and Data -->
+    <a href="qstn.html">
+        <img src="static/bgm.svg" alt="Background Image">
+    </a>
 
-{% endblock %}
+    <h2 class="heading">Face Detection System</h2>
+    <img class="icon" src="static/face-detection.svg" alt="Face Detection Icon">
+
+</body>
+</html>
